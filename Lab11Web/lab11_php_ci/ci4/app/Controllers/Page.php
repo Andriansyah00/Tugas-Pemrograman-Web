@@ -26,13 +26,4 @@ class Page extends BaseController
     {
         echo "ini halaman Term of Services";
     }
-    public function artikel()
-    {
-        return view('artikel', [
-            'title' => 'Article Page',
-            'content' => 'Halaman ini adalah untuk menampilkan berita / artikel yang dirangkum.',
-            'judul_artikel' => 'Membuat Web Menggunakan Code Igniter 4 - by. Febro',
-            'isi_artikel' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias voluptatibus corporis voluptas repellat nulla labore, officiis atque soluta corrupti nobis consectetur fugit eius voluptates, exercitationem amet dolorem totam porro necessitatibus?'
-        ]);
-    }
 }

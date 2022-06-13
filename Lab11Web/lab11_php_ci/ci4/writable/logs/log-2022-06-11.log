@@ -1,0 +1,18 @@
+ERROR - 2022-06-11 00:40:28 --> Table 'lab_ci4.artikel' doesn't exist
+CRITICAL - 2022-06-11 00:40:28 --> Table 'lab_ci4.artikel' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `artikel`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `artikel`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `artikel`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

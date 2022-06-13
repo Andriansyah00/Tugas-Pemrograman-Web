@@ -1,0 +1,122 @@
+CRITICAL - 2022-06-10 09:43:21 --> Invalid file: artikel.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('artikel', [], true)
+ 3 APPPATH\Controllers\Page.php(32): view('artikel', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Page->artikel()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Page))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:45:00 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:45:00 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:48:51 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:48:51 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:51:14 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:51:14 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:51:55 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:51:55 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:52:22 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:52:22 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 09:57:02 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 09:57:02 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-10 10:09:32 --> Error connecting to the database: Unknown database 'ci4'
+CRITICAL - 2022-06-10 10:09:32 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `artikel`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\artikel.php(13): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-10 11:13:45 --> Class 'App\Controllers\PageNotFoundException' not found
+in APPPATH\Controllers\artikel.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->view('artikel')
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-10 11:13:52 --> Invalid file: artikel/detail.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('artikel/detail.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('artikel/detail', [], true)
+ 3 APPPATH\Controllers\artikel.php(25): view('artikel/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Artikel->view('artikel-pertama')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

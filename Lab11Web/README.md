@@ -1,4 +1,4 @@
-# Lab9Web
+# Lab11Web
 
 Tugas Pemrograman Web - Pertemuan 11
 
@@ -259,3 +259,177 @@ Menu Kontak
 Menu Artikel
 
 ![Gambar](img/img23.jpg)
+
+# Praktikum 12: Framework Lanjutan (CRUD)
+
+**Persiapan.**
+
+Untuk memulai membuat aplikasi CRUD sederhana, yang perlu disiapkan adalah
+database server menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan
+melalui XAMPP.
+
+**Membuat Database : Studi Kasus Data Artikel**
+
+CREATE DATABASE lab_ci4;
+
+Lalu buatlah tabel seperti berikut.
+
+![Gambar](img/img24.jpg)
+
+**Konfigurasi koneksi database**
+
+Selanjutnya membuat konfigurasi untuk menghubungkan dengan database server.
+Konfigurasi dapat dilakukan dengan du acara, yaitu pada file app/config/database.php
+atau menggunakan file .env. Pada praktikum ini kita gunakan konfigurasi pada file .env. Lakukan seperti gambar berikut hapus tanda # nya.
+
+![Gambar](img/img25.jpg)
+
+**Membuat Model**
+
+Selanjutnya adalah membuat Model untuk memproses data Artikel. Buat file baru pada
+direktori app/Models dengan nama ArtikelModel.php
+
+![Gambar](img/img26.jpg)
+
+**Membuat Controller**
+
+Buat Controller baru dengan nama Artikel.php pada direktori app/Controllers.
+
+![Gambar](img/img27.jpg)
+
+**Membuat View**
+
+Buat direktori baru dengan nama artikel pada direktori app/views, kemudian buat file
+baru dengan nama index.php.
+
+![Gambar](img/img28.jpg)
+
+Selanjutnya buka browser kembali, dengan mengakses url http://localhost/lab11_php_ci/ci4/public/artikel
+
+![Gambar](img/img29.jpg)
+
+Belum ada data yang diampilkan. Kemudian coba tambahkan beberapa data pada
+database agar dapat ditampilkan datanya.
+
+![Gambar](img/img30.jpg)
+
+Refresh browser, maka hasilnya akan seperti berikut.
+
+![Gambar](img/img31.jpg)
+
+**Membuat Tampilan Detail Artikel**
+
+Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda.
+Tambahkan fungsi baru pada Controller Artikel dengan nama view().
+
+![Gambar](img/img32.jpg)
+
+**Membuat View Detail**
+
+Buat view baru untuk halaman detail dengan nama app/views/artikel/detail.php
+
+![Gambar](img/img33.jpg)
+
+**Membuat Routing untuk artikel detail**
+
+Buka Kembali file app/config/Routes.php, kemudian tambahkan routing untuk artikel
+detail.
+
+![Gambar](img/img34.jpg)
+
+**Membuat Menu Admin**
+
+Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada
+Controller Artikel dengan nama admin_index().
+
+![Gambar](img/img35.jpg)
+
+Selanjutnya buat view untuk tampilan admin dengan nama admin_index.php
+
+```
+<?= $this->include('template/admin_header'); ?>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Judul</th>
+            <th>Status</th>
+            <th>AKsi</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php if ($artikel) : foreach ($artikel as $row) : ?>
+                <tr>
+                    <td><?= $row['id']; ?></td>
+                    <td>
+                        <b><?= $row['judul']; ?></b>
+                        <p><small><?= substr($row['isi'], 0, 50); ?></small></p>
+                    </td>
+                    <td><?= $row['status']; ?></td>
+                    <td>
+                        <a class="btn" href="<?= base_url('/admin/artikel/edit/' . $row['id']); ?>">Ubah</a>
+                        <a class="btn btn-danger" onclick="return confirm('Yakin menghapus data?');" href="<?= base_url('/admin/artikel/delete/' . $row['id']); ?>">Hapus</a>
+                    </td>
+                </tr>
+            <?php endforeach;
+        else : ?>
+            <tr>
+                <td colspan="4">Belum ada data.</td>
+            </tr>
+        <?php endif; ?>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>ID</th>
+            <th>Judul</th>
+            <th>Status</th>
+            <th>AKsi</th>
+        </tr>
+    </tfoot>
+</table>
+
+<?= $this->include('template/admin_footer'); ?>
+```
+
+Tambahkan routing untuk menu admin seperti berikut.
+
+![Gambar](img/img36.jpg)
+
+Setelah itu saya buat template header dan footer baru untuk Halaman Admin di direktori app/view/template.
+
+![Gambar](img/img37.jpg)
+
+![Gambar](img/img38.jpg)
+
+Lalu saya tambahkan file css pada direktori ci4/public untuk mempercantik tampilan Halaman Admin. Dan hasilnya seperti berikut.
+
+![Gambar](img/img39.jpg)
+
+**Menambah Data Artikel**
+
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama add().
+
+![Gambar](img/img40.jpg)
+
+Kemudian buat view untuk form tambah dengan nama form_add.php
+
+![Gambar](img/img41.jpg)
+
+![Gambar](img/img42.jpg)
+
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama edit().
+
+![Gambar](img/img43.jpg)
+
+Kemudian buat view untuk form tambah dengan nama form_edit.php
+
+![Gambar](img/img44.jpg)
+
+![Gambar](img/img45.jpg)
+
+**Menghapus Data**
+
+Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
+
+![Gambar](img/img46.jpg)
