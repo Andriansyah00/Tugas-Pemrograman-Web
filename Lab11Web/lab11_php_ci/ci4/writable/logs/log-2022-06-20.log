@@ -1,0 +1,9 @@
+CRITICAL - 2022-06-20 09:04:35 --> Invalid file: user/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user/index.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('user/index', [], true)
+ 3 APPPATH\Controllers\User.php(14): view('user/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

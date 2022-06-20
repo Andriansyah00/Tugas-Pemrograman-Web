@@ -433,3 +433,114 @@ Kemudian buat view untuk form tambah dengan nama form_edit.php
 Tambahkan fungsi/method baru pada Controller Artikel dengan nama delete().
 
 ![Gambar](img/img46.jpg)
+
+# Praktikum 13: Framework Lanjutan (Modul Login)
+
+**Persiapan**
+
+Untuk memulai membuat modul Login, yang perlu disiapkan adalah database server
+menggunakan MySQL. Pastikan MySQL Server sudah dapat dijalankan melalui
+XAMPP.
+
+**Membuat Tabel User**
+
+```
+CREATE TABLE user (
+ id INT(11) auto_increment,
+ username VARCHAR(200) NOT NULL,
+ useremail VARCHAR(200),
+ userpassword VARCHAR(200),
+ PRIMARY KEY(id)
+);
+```
+
+![Gambar](img/img47.jpg)
+
+**Membuat Model User**
+
+Selanjutnya adalah membuat Model untuk memproses data Login. Buat file baru pada
+direktori app/Models dengan nama UserModel.php seperti berikut.
+
+![Gambar](img/img48.jpg)
+
+**Membuat Controller User**
+
+Buat Controller baru dengan nama **User.php** pada direktori **app/Controllers.**
+Kemudian tambahkan method **index()** untuk menampilkan daftar user, dan method
+**login()** untuk proses login.
+
+![Gambar](img/img49.jpg)
+
+![Gambar](img/img50.jpg)
+
+**Membuat View Login**
+
+Buat direktori baru dengan nama **user** pada direktori **app/views**, kemudian buat file
+baru dengan nama **login.php**
+
+![Gambar](img/img51.jpg)
+
+**Membuat Database Seeder**
+
+Database seeder digunakan untuk membuat data dummy. Untuk keperluan ujicoba modul
+login, kita perlu memasukkan data user dan password kedaalam database. Untuk itu buat
+database seeder untuk tabel user. Buka CLI, kemudian tulis perintah berikut:
+
+```
+php spark make:seeder UserSeeder
+```
+
+![Gambar](img/img52.jpg)
+
+Selanjutnya, buka file **UserSeeder.php** yang berada di lokasi direktori
+**/app/Database/Seeds/UserSeeder.php** kemudian isi dengan kode seperti berikut:
+
+![Gambar](img/img53.jpg)
+
+Selanjutnya buka kembali CLI dan ketik perintah berikut:
+
+```
+php spark db:seed UserSeeder
+```
+
+![Gambar](img/img54.jpg)
+
+**Uji Coba Login**
+
+Selanjutnya buka url http://localhost/lab11_php_ci/ci4/public/user/login seperti berikut
+
+![Gambar](img/img55.jpg)
+
+**Menambahkan Auth Filter**
+
+Selanjutnya membuat filer untuk halaman admin. Buat file baru dengan nama **Auth.php**
+pada direktori **app/Filters.**
+
+![Gambar](img/img56.jpg)
+
+Selanjutnya buka file app/Config/Filters.php tambahkan kode berikut:
+
+```
+'auth' => App\Filters\Auth::class
+```
+
+![Gambar](img/img57.jpg)
+
+Selanjutnya buka file **app/Config/Routes.php** dan sesuaikan kodenya.
+
+![Gambar](img/img58.jpg)
+
+**Fungsi Logout**
+
+Tambahkan method logout pada Controller User seperti berikut:
+
+![Gambar](img/img59.jpg)
+
+Di pertemuan sebelumnya saya telah menambahkan menu logout di header admin.
+File itu ada di direktori **app\view\template** lalu buka file **admin_header.php** lihat kode berikut
+
+```
+<a href="<?= base_url('/admin/logout');?>">Logout</a>
+```
+
+![Gambar](img/img60.jpg)
