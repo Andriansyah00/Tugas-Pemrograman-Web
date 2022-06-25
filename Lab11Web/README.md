@@ -544,3 +544,71 @@ File itu ada di direktori **app\view\template** lalu buka file **admin_header.ph
 ```
 
 ![Gambar](img/img60.jpg)
+
+# Praktikum 14: Pagination dan Pencarian
+
+**Membuat Pagination**
+
+Pagination merupakan proses yang digunakan untuk membatasi tampilan yang panjang
+dari data yang banyak pada sebuah website. Fungsi pagination adalah memecah
+tampilan menjadi beberapa halaman tergantung banyaknya data yang akan ditampilkan
+pada setiap halaman.
+
+Pada Codeigniter 4, fungsi pagination sudah tersedia pada Library sehingga cukup
+mudah menggunakannya.
+
+Untuk membuat pagination, buka Kembali Controller Artikel, kemudian modifikasi
+kode pada method admin_index seperti berikut.
+
+![Gambar](img/img61.jpg)
+
+Kemudian buka file **views/artikel/admin_index.php** dan tambahkan kode berikut
+dibawah deklarasi tabel data.
+
+![Gambar](img/img62.jpg)
+
+Selanjutnya buka kembali menu daftar artikel, tambahkan data lagi untuk melihat
+hasilnya.
+
+![Gambar](img/img63.jpg)
+
+**Membuat Pencarian**
+
+Pencarian data digunakan untuk memfilter data.
+Untuk membuat pencarian data, buka kembali **Controller Artikel**, pada method
+**admin_index** ubah kodenya seperti berikut.
+
+![Gambar](img/img64.jpg)
+
+Kemudian buka kembali file views/artikel/admin_index.php dan tambahkan form
+pencarian sebelum deklarasi tabel seperti berikut:
+
+![Gambar](img/img65.jpg)
+
+Dan pada link pager ubah seperti berikut.
+
+![Gambar](img/img66.jpg)
+
+Selanjutnya ujicoba dengan membuka kembali halaman admin artikel, masukkan kata
+kunci tertentu pada form pencarian.
+
+![Gambar](img/img67.jpg)
+
+**Upload Gambar**
+
+Menambahkan fungsi unggah gambar pada tambah artikel. Buka kembali **Controller Artikel**, sesuaikan kode pada method **add** seperti berikut:
+
+![Gambar](img/img68.jpg)
+
+Kemudian pada file views/artikel/form_add.php tambahkan field input file seperti
+berikut.
+
+![Gambar](img/img69.jpg)
+
+Pada file views/artikel/form_add.php tambahkan field input file seperti berikut. Dan sesuaikan tag form dengan menambahkan ecrypt type seperti berikut.
+
+![Gambar](img/img70.jpg)
+
+Ujicoba file upload dengan mengakses menu tambah artikel.
+
+![Gambar](img/img71.jpg)

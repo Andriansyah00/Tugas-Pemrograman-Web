@@ -1,0 +1,6 @@
+CRITICAL - 2022-06-24 19:54:30 --> Cannot redeclare App\Controllers\Artikel::admin_index()
+in APPPATH\Controllers\artikel.php on line 77.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-06-24 19:54:39 --> Cannot redeclare App\Controllers\Artikel::admin_index()
+in APPPATH\Controllers\artikel.php on line 77.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
